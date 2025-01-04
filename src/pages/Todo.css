@@ -1,0 +1,31 @@
+.todo{
+    position: relative;
+}
+.todo-inputs-div{
+    /* border: 1px solid black; */
+    border-radius: 5px;
+    box-shadow: rgba(0,0,0,0.45) 0px 5px 15px;
+}
+.todo-inputs input{
+    border:none;
+    outline: none;
+    
+}
+.home-btn{
+    border-radius: 3px;
+}
+
+.todo-card-p{
+    text-justify: inter-word;
+}
+.todo-update{
+    width: 100%;
+    height: 80vh;
+    position: absolute;
+    position: fixed;
+    top: 80px;
+    display: none;
+}
+.update{
+    height: 100%;
+}
