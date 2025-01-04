@@ -11,7 +11,7 @@ const Login = () => {
 
     try {
         // Sending the login request to the server
-        const response = await axios.post('http://localhost:1000/auth/login', {
+        const response = await axios.post('https://todo-backend-bgka.onrender.com/auth/login', {
             email: email,
             password: password
         },
