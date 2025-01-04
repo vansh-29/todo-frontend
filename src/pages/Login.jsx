@@ -1,7 +1,7 @@
 import { useNavigate} from "react-router-dom";
 import React from 'react'
 import axios from 'axios'
-import About from "./About";
+
 const Login = () => {
     const navigate = useNavigate();
     async function submitHandler(event) {
@@ -11,7 +11,7 @@ const Login = () => {
 
     try {
         // Sending the login request to the server
-        const response = await axios.post('${window.location.origin}/auth/login', {
+        const response = await axios.post('http://localhost:1000/auth/login', {
             email: email,
             password: password
         },

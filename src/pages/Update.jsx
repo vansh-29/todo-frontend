@@ -5,7 +5,7 @@ const Update = ({display,index,task , setTask} ) => {
   const [title, settitle] = useState("");
   const [body, setbody] = useState("");
   const  updateTask = async () =>{
-      const response = await axios.put(`${window.location.origin}/user/update/${task[index]._id}` , 
+      const response = await axios.put(`https://todo-backend-bgka.onrender.com/user/update/${task[index]._id}` , 
       {title : title , body:body} , { withCredentials: true, });
       
       display("none")

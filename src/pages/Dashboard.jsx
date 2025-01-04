@@ -36,7 +36,7 @@ export default function Dashboard({ username = "User" }) {
      
       console.log("first")
      // Fetch tasks from the backend using the userId
-      const response = await axios.get(`${window.location.origin}/user/get`,{
+      const response = await axios.get(`https://todo-backend-bgka.onrender.com/user/get`,{
         withCredentials : true
       }); // Adjust URL as per your backend
       const data = await response.json();

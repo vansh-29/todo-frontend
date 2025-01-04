@@ -11,7 +11,7 @@ const Signup = () => {
         const password = document.getElementById('password').value;
 
         try{
-            const response = await axios.post('${window.location.origin}/auth/signup' , {
+            const response = await axios.post('https://todo-backend-bgka.onrender.com/auth/signup' , {
                 name:name,
                 email:email,
                 password:password,

@@ -41,7 +41,7 @@ const Todo = () => {
     useEffect(() => {
         if (userId) {
             axios
-                .get(`${window.location.origin}/user/get/${userId}` ,  {
+                .get(`https://todo-backend-bgka.onrender.com/user/get/${userId}` ,  {
                   withCredentials: true, // Enables cookies to be sent
                 }) // Use the full URL for the API
                 .then((response) => {
@@ -67,7 +67,7 @@ const Todo = () => {
     const submit = async () => {
     //   console.log(Inputs);
 
-        const response = await axios.post( `${window.location.origin}/user/add/${userId}` , {title : Inputs.title ,body: Inputs.body} ,
+        const response = await axios.post( `https://todo-backend-bgka.onrender.com/user/add/${userId}` , {title : Inputs.title ,body: Inputs.body} ,
           {
             withCredentials:true,
           }
@@ -82,7 +82,7 @@ const Todo = () => {
     const del = async (id) => {
       // id = taask id
       console.log(id);
-      const response = await axios.delete(`${window.location.origin}/user/delete/${id}` , {withCredentials:true})
+      const response = await axios.delete(`https://todo-backend-bgka.onrender.com/user/delete/${id}` , {withCredentials:true})
       
       setArray(response.data.allTasks);
       toast("task deleted");
